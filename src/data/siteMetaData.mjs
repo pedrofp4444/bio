@@ -1,0 +1,21 @@
+export const siteMetadata = {
+  title: "pedropereira.xyz",
+  author: "Pedro Pereira",
+  headerTitle: "Pedro Pereira",
+  description: "Personal portfolio of Pedro Pereira",
+  language: "en-us",
+  theme: "light",
+  siteName: "pedropereira.xyz",
+  siteUrl: "https://pedropereira.xyz",
+  siteRepo: "https://github.com/pedrofp4444/bio",
+  siteLogo: "/favicon.ico",
+  image: "/static/homepage.png",
+  twitterImage: "/static/homepage.png",
+  socialBanner: "/static/homepage.png",
+  email: "mailto:hello@pedropereira.xyz",
+  github: "https://github.com/pedrofp4444",
+  twitter: "https://twitter.com/", // TODO: Create a twitter account
+  linkedin: "https://linkedin.com/in/pedro-pereira-280989262",
+  locale: "en-US",
+  googleSiteVerification: "hq-vUxMQ4SdyIUhlzaxOOcK1GzPtxQn9zhT3SLxAgPI",
+};
