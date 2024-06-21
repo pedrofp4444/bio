@@ -30,7 +30,82 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply min-h-screen bg-background text-foreground;
   }
+}
+
+.markdown h1 {
+  @apply mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100;
+}
+
+.markdown h2 {
+  @apply mb-4 text-3xl font-semibold text-gray-900 dark:text-gray-100;
+}
+
+.markdown h3 {
+  @apply mb-4 text-2xl font-medium text-gray-900 dark:text-gray-100;
+}
+
+.markdown p {
+  @apply mb-4 leading-relaxed text-gray-800 dark:text-gray-200;
+}
+
+.markdown a {
+  @apply text-blue-600 underline underline-offset-2 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300;
+}
+
+.markdown ul,
+.markdown ol {
+  @apply mb-4 ml-6 list-inside list-disc text-gray-800 dark:text-gray-200;
+}
+
+.markdown ul li,
+.markdown ol li {
+  @apply mb-2;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-blue-600 pl-4 italic text-gray-600 dark:text-gray-400;
+}
+
+.markdown pre {
+  @apply overflow-auto rounded-md bg-gray-100 p-4 text-sm text-gray-900 dark:bg-gray-800 dark:text-gray-100;
+}
+
+.markdown code {
+  @apply rounded bg-gray-100 px-1 py-0.5 text-sm text-red-600 dark:bg-gray-700 dark:text-red-400;
+}
+
+.markdown img {
+  @apply mx-auto my-4 rounded-md shadow-md;
+}
+
+.markdown hr {
+  @apply my-4 border-gray-300 dark:border-gray-600;
+}
+
+.markdown ins {
+  @apply text-purple-600 underline;
+}
+
+.markdown input[type="checkbox"] {
+  @apply h-5 w-5 text-blue-500;
+}
+
+.markdown sup {
+  @apply text-xs;
+}
+
+.markdown sub {
+  @apply text-xs;
+}
+
+.markdown .footnotes {
+  @apply text-xs;
+}
+
+.markdown .footnotes li {
+  @apply text-xs;
 }
