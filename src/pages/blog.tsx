@@ -44,6 +44,22 @@ export default function Blog() {
             </span>
           </div>
           <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
+          <BlogCard
+              id="ia-formulacao-e-tipos-de-problemas"
+              title="Formulação e tipos de problemas"
+              subtitle="Inteligência Artifical"
+              description="Apresentação de conteúdos concisos."
+              date="23-09-2024"
+              author="Pedro Pereira"
+            />
+            <BlogCard
+              id="cc-camada-de-transporte-sockets-tcp-udp"
+              title="Introdução a sockets, TCP e UDP"
+              subtitle="Comunicações por Computador"
+              description="Apresentação de conteúdos concisos."
+              date="19-09-2024"
+              author="Pedro Pereira"
+            />
             <BlogCard
               id="example-1"
               title="Post exemplo"
