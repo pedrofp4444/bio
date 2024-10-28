@@ -44,7 +44,7 @@ export default function Blog() {
             </span>
           </div>
           <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
-          <BlogCard
+            <BlogCard
               id="ia-formulacao-e-tipos-de-problemas"
               title="Formulação e tipos de problemas"
               subtitle="Inteligência Artifical"
