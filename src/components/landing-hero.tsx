@@ -42,7 +42,7 @@ export default function LandingHero() {
                 Pedro Pereira
               </h1>
               <span className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl">
-                Computer engineer on the making
+                Computer engineer in the making
               </span>
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
