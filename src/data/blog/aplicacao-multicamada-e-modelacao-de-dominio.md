@@ -1,0 +1,115 @@
+---
+title: "Modelação de domínio"
+subtitle: "Desenvolvimento de Sistemas de Software"
+description: "Apresentação de conteúdos concisos."
+date: "17-09-2024"
+author: "Pedro Pereira"
+---
+
+### O que é uma aplicação multicamada?
+
+Uma **aplicação multicamada** (ou multi-tier) é uma arquitetura de software que divide a aplicação em **camadas independentes**, onde cada camada tem uma responsabilidade específica e comunica com as outras camadas de forma estruturada. Esta abordagem permite maior modularidade e escalabilidade no desenvolvimento de software.
+
+As camadas mais comuns numa arquitetura multicamada são:
+
+1. **Camada de apresentação**: a interface com o utilizador (UI), onde se tratam inputs e outputs.
+2. **Camada lógica**: onde está a lógica de negócio. Esta camada processa os dados e aplica as regras de negócio.
+3. **Camada de dados**: responsável pela persistência de dados, como interagir com bases de dados.
+
+Cada camada comunica com a camada adjacente e, ao separar as responsabilidades, a manutenção, escalabilidade e reutilização do código tornam-se mais fáceis.
+
+### O que é um modelo de domínio?
+
+Um **modelo de domínio** é uma representação visual e abstrata do **problema** que estamos a tentar resolver, e não da **solução**. O seu objetivo é descrever as "coisas" ou **entidades** relevantes do domínio e as relações entre elas. Em vez de representar atributos ou funcionalidades, o modelo de domínio foca-se em identificar os substantivos que fazem parte do problema e como eles se inter-relacionam.
+
+Serve para:
+
+- Compreender o problema em questão.
+- Normalizar a linguagem entre todos os envolvidos no projeto.
+- Mapear entidades e relacionamentos de forma clara e consistente.
+
+O modelo de domínio é utilizado numa fase inicial do desenvolvimento, quando o conhecimento sobre o sistema ainda é limitado. O seu propósito é estruturar o entendimento do problema e auxiliar a comunicação entre os membros da equipa.
+
+**Notação**:
+
+- **Retângulos**: representam as entidades.
+- **Relacionamentos**: devem ser explícitos, sem utilizar o verbo "ter", e devem incluir a multiplicidade e a direção das relações.
+
+É importante que as relações entre entidades possam ser lidas de forma que façam sentido, formando uma frase coerente. Por exemplo, em vez de "Cliente tem uma Encomenda", usamos "Cliente faz Encomenda", o que melhora a compreensão.
+
+### Principais erros ao modelar:
+
+1. Pensar que o **modelo de domínio** é um diagrama de classes da solução (não é).
+2. Confundir a modelação de "coisas" do problema com a criação de classes de programação, onde se definem atributos e métodos.
+
+### Passos para modelar um domínio:
+
+1. **Identificar os substantivos** no problema descrito (as "coisas" que fazem parte do domínio).
+2. **Construir o modelo** desenhando entidades e os seus relacionamentos.
+
+**Notas**:
+
+- As **associações** são indicadas por linhas, não por setas.
+- Caso existam detalhes implícitos, devemos torná-los **explícitos**.
+- A mesma entidade pode ser representada em diferentes partes do diagrama para facilitar a compreensão.
+- **Restrições** não devem ser incluídas no modelo de domínio (estas vão para os casos de uso).
+- O modelo de domínio deve ser **refinado ao longo do tempo**, começando simples e evoluindo à medida que o projeto avança.
+- A aplicação em si raramente aparece como entidade, exceto se fizer parte do problema a ser abstraído, como uma lógica de negócio.
+- Relações de **hierarquia** caracterizam-se por "é um” e não precisam de multiplicidade.
+
+### História e utilidade do UML
+
+O **UML (Unified Modeling Language)** foi criado na década de 1990, numa tentativa de unificar as diversas metodologias de modelação que existiam até então, como o método de Booch, OMT (Object Modeling Technique), e OOSE (Object-Oriented Software Engineering). O UML foi uniformizado pelo **Object Management Group (OMG)** em 1997, tornando-se um dos padrões mais utilizados para a modelação de sistemas orientados a objetos.
+
+**Factos interessantes**:
+
+- O UML foi influenciado por várias abordagens de modelação orientada a objetos que estavam a emergir nos anos 80 e 90.
+- Um dos seus criadores, Grady Booch, é uma figura de destaque na área de software, e o seu método de modelação foi uma das bases do UML.
+
+**Caracterização e utilidade**:
+O UML é uma **linguagem de modelação** visual que permite a criação de diagramas que representam a arquitetura, design e implementação de sistemas de software. Facilita a comunicação entre diferentes partes envolvidas no desenvolvimento de software, como analistas, arquitetos e programadores. O UML é particularmente útil em:
+
+- **Análise de requisitos**: ajuda a definir o que o sistema deve fazer, modelando cenários e casos de uso.
+- **Design de sistemas**: permite visualizar a estrutura e o comportamento do sistema através de vários tipos de diagramas.
+- **Documentação**: fornece uma representação clara e unificada que pode ser usada para documentar sistemas existentes.
+
+### Modelos vs Diagramas
+
+- **Modelos**: são representações abstratas de um sistema ou de uma parte de um sistema. Um modelo capta o comportamento ou estrutura de um sistema num nível mais conceptual, servindo como uma ferramenta para compreensão e raciocínio. Exemplos de modelos incluem modelos de domínio, modelos de comportamento e modelos de interação.
+- **Diagramas**: são representações visuais de modelos. São formas de expressar graficamente os elementos e as relações que compõem o modelo. No UML, existem vários tipos de diagramas, como:
+    - **Diagrama de classes**: mostra a estrutura estática do sistema e as relações entre objetos.
+    - **Diagrama de casos de uso**: ilustra a interação dos utilizadores (atores) com o sistema.
+    - **Diagrama de sequência**: representa a ordem e o fluxo de mensagens entre objetos ao longo do tempo.
+
+Em resumo, um **modelo** é a abstração global, enquanto os **diagramas** são as representações visuais específicas desse modelo.
+
+### Exemplos e conceitos chave:
+
+1. **Normalização linguística**: Garantir que todos os envolvidos utilizam a mesma terminologia, eliminando ambiguidades.
+2. **Relacionamentos e multiplicidade**: Devem ser bem definidos para evitar confusões e inconsistências no modelo.
+3. **Hierarquias**: Não necessitam de multiplicidade, mas sim de clareza nas relações (ex.: "é um").
+
+### Configuração do Visual Paradigm
+
+![config1.png](/images/blog/aplicacao-multicamada-e-modelacao-de-dominio/config1.png)
+
+Caption: Colocar o ▶️ que permite perceber a direção dos relacionamentos.
+
+![config2.png](/images/blog/aplicacao-multicamada-e-modelacao-de-dominio/config2.png)
+
+Caption: Escolher multiplicidade do relacionamento, ao clicar duas vezes na linha da associação num local próximo do candidato a entidade.
+
+### Exemplo de construção de modelo de domínio
+
+1. **Seleção dos substantivos candidatos a entidades**.
+
+Estude-se o texto proposto na aula prática:
+
+Uma rede social permite que os utilizadores partilhem publicações, comentem e sigam outros utilizadores. Cada utilizador é identificado por um ID único e tem nome, email, senha e data de nascimento. As publicações feitas pelos utilizadores incluem conteúdo, data de publicação e autor. Os comentários nas publicações têm conteúdo, data de publicação, autor e estão associados a uma publicação específica. As relações de seguimento entre utilizadores permitem que um utilizador siga outro, e cada seguimento tem uma data de início.
+
+**Nota:** Os blocos de texto que descrevem os relacionamentos não são selecionados.
+
+1. **Construção do diagrama de acordo com a interpretação do texto.**
+
+![modelodominio.png](/images/blog/aplicacao-multicamada-e-modelacao-de-dominio/modelodominio.png)
+

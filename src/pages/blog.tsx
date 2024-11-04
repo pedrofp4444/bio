@@ -61,6 +61,14 @@ export default function Blog() {
               author="Pedro Pereira"
             />
             <BlogCard
+              id="aplicacao-multicamada-e-modelacao-de-dominio"
+              title="Modelação de domínio"
+              subtitle="Desenvolvimento de Sistemas de Software"
+              description="Apresentação de conteúdos concisos."
+              date="17-09-2024"
+              author="Pedro Pereira"
+            />
+            <BlogCard
               id="example-1"
               title="Post exemplo"
               subtitle="Exemplos de Markdown"
