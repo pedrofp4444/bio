@@ -89,7 +89,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps<BlogPostProps, Params> = async ({
+  params,
+}) => {
   const { id } = params as Params;
   const blogData = await getBlogData(id);
 
