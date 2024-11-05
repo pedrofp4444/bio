@@ -1,8 +1,32 @@
 import { NextSeo } from "next-seo";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import BlogCard from "@/components/blog/blog-card";
+import { GetStaticProps } from "next";
+import { getAllBlogMetadata } from "@/utility/blog";
 
-export default function Blog() {
+interface BlogMetadata {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  date: string;
+  author: string;
+}
+
+interface BlogProps {
+  allBlogsData: BlogMetadata[];
+}
+
+export const getStaticProps: GetStaticProps<BlogProps> = async () => {
+  const allBlogsData = getAllBlogMetadata();
+  return {
+    props: {
+      allBlogsData,
+    },
+  };
+};
+
+export default function Blog({ allBlogsData }: BlogProps) {
   return (
     <>
       <NextSeo
@@ -44,38 +68,17 @@ export default function Blog() {
             </span>
           </div>
           <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
-            <BlogCard
-              id="ia-formulacao-e-tipos-de-problemas"
-              title="Formulação e tipos de problemas"
-              subtitle="Inteligência Artifical"
-              description="Apresentação de conteúdos concisos."
-              date="23-09-2024"
-              author="Pedro Pereira"
-            />
-            <BlogCard
-              id="cc-camada-de-transporte-sockets-tcp-udp"
-              title="Introdução a sockets, TCP e UDP"
-              subtitle="Comunicações por Computador"
-              description="Apresentação de conteúdos concisos."
-              date="19-09-2024"
-              author="Pedro Pereira"
-            />
-            <BlogCard
-              id="aplicacao-multicamada-e-modelacao-de-dominio"
-              title="Modelação de domínio"
-              subtitle="Desenvolvimento de Sistemas de Software"
-              description="Apresentação de conteúdos concisos."
-              date="17-09-2024"
-              author="Pedro Pereira"
-            />
-            <BlogCard
-              id="example-1"
-              title="Post exemplo"
-              subtitle="Exemplos de Markdown"
-              description="Um exemplo de post em Markdown."
-              date="21-06-2024"
-              author="Pedro Pereira"
-            />
+            {allBlogsData.map((blog) => (
+              <BlogCard
+                key={blog.id}
+                id={blog.id}
+                title={blog.title}
+                subtitle={blog.subtitle}
+                description={blog.description}
+                date={blog.date}
+                author={blog.author}
+              />
+            ))}
           </div>
         </div>
       </section>
